@@ -34,17 +34,18 @@ QueueCTL is divided into three distinct layers to strictly separate concerns:
 3. **CLI & Routing (`cmd/`)**: The user interface. Spawns daemons, handles detached processes, and formats output.
 
 ```mermaid
-architecture-beta
-    group system(System)[QueueCTL Node]
-
-    service cli(CLI Application)
-    service worker_1(Worker Daemon 1)
-    service worker_2(Worker Daemon N)
-    service db(SQLite Database)[Persistent Store]
-
-    cli:R --> L:db
-    worker_1:R --> L:db
-    worker_2:R --> L:db
+flowchart TD
+    subgraph System ["QueueCTL Node"]
+        cli["CLI Application"]
+        worker1["Worker Daemon 1"]
+        workerN["Worker Daemon N"]
+        
+        db[("SQLite Database\n(Persistent Store)")]
+        
+        cli --> db
+        worker1 --> db
+        workerN --> db
+    end
 ```
 
 ---
