@@ -1,0 +1,5 @@
+queuectl.exe
+queuectl.exe~
+*.db
+*.db-shm
+*.db-wal
