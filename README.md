@@ -4,6 +4,8 @@ QueueCTL is a single-binary, embedded-storage, in-process background worker pool
 
 This document serves as the official architectural reference for QueueCTL. It explains the system from first principles, detailing not just *what* the system does, but *why* the design decisions were made, how concurrency is safely managed, and what trade-offs exist in the current architecture.
 
+# Demo : https://drive.google.com/file/d/1h-c6EmByotIkCsGDXj6k54vBG47IX4HQ/view?usp=sharing
+
 ---
 
 ## 1. Introduction and First Principles
